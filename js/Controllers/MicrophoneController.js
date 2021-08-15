@@ -1,5 +1,6 @@
-class MicrophoneController{
+class MicrophoneController extends ClassEvent{
     constructor(){
+        super()
         this._stream;
         navigator.mediaDevices.getUserMedia({
             audio:true

@@ -1,9 +1,11 @@
-class CameraController{
+class CameraController extends ClassEvent{
     constructor(){
+        super()
         this._video = document.querySelector("video")
         this._stream;
         navigator.mediaDevices.getUserMedia({
-            video:true
+            video:true,
+            audio: true
         }).then(stream=>{
             this._stream = stream;
             this._video.srcObject = stream;
