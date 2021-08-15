@@ -9,6 +9,7 @@ class MicrophoneController extends ClassEvent{
             let audio = new Audio();
             audio.srcObject = stream;
             audio.play()
+            this.trigger("play",audio)
         })
     }
     stop(){

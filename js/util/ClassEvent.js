@@ -13,7 +13,7 @@ class ClassEvent{
        args.push(new Event(eventName)) //Adiciona o nome desse evento na lista dos eventos nativos do nagegador. O objetivo aqui é retornar como um evento nativo do navegador que estou criando aqui. Estou dando push para esse evento ser o útltimo no index do array args (args é a variavel que está aqui nesse escopo).
        if(this._events[eventName]instanceof Array){
         this._events[eventName].forEach(fn => {
-            fn.aplay(null, args) // Isso aqui basicamente executa as instruções da função passada. Ele pede 2 parametros, o primeiro é sempre null e o segundo passa os argumentos para a função
+            fn.apply(null, args) // Isso aqui basicamente executa as instruções da função passada. Ele pede 2 parametros, o primeiro é sempre null e o segundo passa os argumentos para a função
         });
        }
     }
