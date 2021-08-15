@@ -44,8 +44,7 @@ class CameraController extends ClassEvent{
                     video.controls=true
                     video.style =`
                     position: absolute;
-                    width:100vw;
-                    height:100vh;
+                    width:100%;
                     z-index: 1000;
                     top:0px;
                     left:0px;
