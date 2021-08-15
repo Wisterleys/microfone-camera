@@ -5,11 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microfone</title>
+    <style>
+        main{
+            width: 95vw;height: 100vh;
+            display: flex;
+            justify-content: space-between;
+        }
+        #video{
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        #video{width: 50%;}
+        #controlsVideo{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
-    <button id="btn-mic">Ouvir</button>
-    <button id="btn-mic-stop">Parar</button>
+    <main>
+        <section id="audio">
+            <button id="btn-mic">Ouvir</button>
+            <button id="btn-mic-stop">Parar</button>
+        </section>
+        <section id="video">
+            <video src=""></video>
+            <div id="controlsVideo">
+                
+                <button id="btn-video">Assistir</button>
+                <button id="btn-video-stop">Parar</button>
+            </div>
+        </section>
+    </main>
     <script src="js/Controllers/MicrophoneController.js"></script>
+    <script src="js/Controllers/CameraController.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
